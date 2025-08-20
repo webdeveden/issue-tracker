@@ -29,3 +29,16 @@ colors are: red, violet,green
 commit : Build the issue status badge
 
 
+ADDING LOADING SKELETON
+
+npm i react-loading-skeleton@3.3.1
+
+npm i delay (= to simulate slow connection)
+
+create a loading file in the same page folder you want to simulate : LoadingIssuesPage
+
+
+=> google npm react loading skeleton doc
+
+commit: 
+
