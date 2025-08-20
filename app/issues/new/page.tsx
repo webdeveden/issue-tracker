@@ -26,10 +26,22 @@ const NewIssuePage = () => {
   } = useForm<IssueForm>({
     resolver: zodResolver(createIssueScheama),
   });
+
   // displaying dynamically errors to clients
   const [error, setError] = useState("");
   // when to show the spinner and submit button
   const [isSubmitting, setSubmit] = useState(false);
+
+  const handleFormSubmit = handleSubmit(async (data) => {
+    try {
+      setSubmit(true);
+      await axios.post("/api/issues", data);
+      router.push("/issues");
+    } catch (error) {
+      setError("An unexpected error  occured");
+      setSubmit(false);
+    }
+  });
   return (
     <div className="max-w-xl">
       {error && (
@@ -37,19 +49,7 @@ const NewIssuePage = () => {
           <Callout.Text>{error}</Callout.Text>
         </Callout.Root>
       )}
-      <form
-        className="space-y-3"
-        onSubmit={handleSubmit(async (data) => {
-          try {
-            setSubmit(true);
-            await axios.post("/api/issues", data);
-            router.push("/issues");
-          } catch (error) {
-            setError("An unexpected error  occured");
-            setSubmit(false);
-          }
-        })}
-      >
+      <form className="space-y-3" onSubmit={handleFormSubmit}>
         <TextField.Root>
           <TextField.Input placeholder="Title" {...register("title")} />
         </TextField.Root>
