@@ -1,0 +1,6 @@
+in issue folder add a new folder 
+new add a page file
+add a textfield component from radix ui
+make the button label linked it should take yiu to the new issue
+set the max witdth of it containe tp xl
+apply padding to the main element.
