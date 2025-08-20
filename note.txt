@@ -5,3 +5,9 @@ install react-hook-form@7.46.1
 
 
 install axios@1.5.0
+
+
+
+SPINNER
+
+Tailwind element spinner on google
