@@ -11,3 +11,8 @@ install axios@1.5.0
 SPINNER
 
 Tailwind element spinner on google
+
+
+SHOWING ISSUES
+
+use prisma to fetch data from our database
