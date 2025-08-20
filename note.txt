@@ -16,3 +16,16 @@ Tailwind element spinner on google
 SHOWING ISSUES
 
 use prisma to fetch data from our database
+
+findmany.
+
+showing badges using radix ui
+
+create a separate component for this " IssuesStatusBadge"
+predefining the label and color of status by create a const statusMap:
+colors are: red, violet,green
+
+
+commit : Build the issue status badge
+
+
