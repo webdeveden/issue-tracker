@@ -50,4 +50,23 @@ DISPLAY ISSUES
 = for new segment too install a different loading file (loadingnewissue page)
 commit: show issue details
 
+Changing the style in pagedetails
+:
+=> heading for title
+=> status as the badge
+=> use flex to fles 2 elements
+=> use card for description
 
+comit: style the issue detail page
+
+ADDING A MARKDOWN preview
+
+=> install this package to keep the format of your typed text:
+-npm i react-markdown@8.0.7
+- intall tailwing typography: follow the doc
+ npm i -D tailwindcss/typography
+
+- in your pagedetail import ReactMarkdown 
+- use the ReactMarkdown element where your description will be
+
+commit: Add markdown preview
