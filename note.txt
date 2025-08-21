@@ -40,5 +40,14 @@ create a loading file in the same page folder you want to simulate : LoadingIssu
 
 => google npm react loading skeleton doc
 
-commit: 
+commit: aading page skeleton
+
+DISPLAY ISSUES
+
+=> Create an IssueDetailPage by creating and id folder
+=> using prisma fethe the unique id
+=> create a sepate loading file(loadingissuesdetailpage ) in issues/[id]
+= for new segment too install a different loading file (loadingnewissue page)
+commit: show issue details
+
 
