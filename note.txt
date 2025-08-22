@@ -91,3 +91,10 @@ add a grid with 2 colomnn and 2 elements of box
 - when edit is clicked take him to /issues/userd.id/edit
 
 commit: Add the edit button
+
+APPLYING THE SINGLE RESPONSABILITY PRINCIPLE
+
+=>each component should be responsible of a specific task
+
+- create a component in id folder " EditIssueButton" to move our edit button over there
+- create another component "IssueDetails" and move our detail element in there
