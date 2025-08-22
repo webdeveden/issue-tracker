@@ -1,6 +1,6 @@
 "use client";
 import { Button, Callout, Text, TextField } from "@radix-ui/themes";
-import SimpleMDE from "react-simplemde-editor";
+// import SimpleMDE from "react-simplemde-editor";
 import "easymde/dist/easymde.min.css";
 import { useForm, Controller } from "react-hook-form";
 import axios from "axios";
@@ -9,11 +9,17 @@ import { useState } from "react";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { createIssueScheama } from "@/app/validationSchemas";
 import { z } from "zod";
+import dynamic from "next/dynamic";
 import ErrorMessage from "@/app/components/ErrorMessage";
 import Spinner from "@/app/components/Spinner";
 
 // type safe from zod schema directly
 type IssueForm = z.infer<typeof createIssueScheama>;
+
+// lazy loading to disable server side rendering
+const SimpleMDE = dynamic(() => import("react-simplemde-editor"), {
+  ssr: false,
+});
 
 const NewIssuePage = () => {
   // navigating user back to the creating new issue after submit
