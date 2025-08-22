@@ -80,3 +80,14 @@ Building skeleton for detailpage:
 (= google search:react loading skeleton )
 
 in the new page loading use 2 skeletons
+
+ADDING AN EDIT BUTTON ON THE RIGHT OF THE page
+
+= in the issue/id/page where we view detail 
+add a grid with 2 colomnn and 2 elements of box
+- on mobile devices make sure you have just one column(view radix documentation under breakpoint)
+-add a gap of 5
+- add an icon (npm i @radiux-ui/react-icons)
+- when edit is clicked take him to /issues/userd.id/edit
+
+commit: Add the edit button
