@@ -106,3 +106,7 @@ BUILDING THE EDIT page
 under _component "IssueForm"
 - so we can initialize the  info of our issue will have to 
 pass the issue props of our database from prisma
+
+create an API endpoint for editing
+
+- create [id] folder inside your API folder and add a route file

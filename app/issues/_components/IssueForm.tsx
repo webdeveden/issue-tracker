@@ -7,7 +7,7 @@ import axios from "axios";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
 import { zodResolver } from "@hookform/resolvers/zod";
-import { createIssueScheama } from "@/app/validationSchemas";
+import { IssueScheama } from "@/app/validationSchemas";
 import { z } from "zod";
 import dynamic from "next/dynamic";
 import ErrorMessage from "@/app/components/ErrorMessage";
@@ -20,7 +20,7 @@ interface Props {
   issue?: Issue;
 }
 // type safe from zod schema directly
-type IssueFormData = z.infer<typeof createIssueScheama>;
+type IssueFormData = z.infer<typeof IssueScheama>;
 
 // lazy loading to disable server side rendering
 const SimpleMDE = dynamic(() => import("react-simplemde-editor"), {
@@ -36,7 +36,7 @@ const IssueForm = ({ issue }: Props) => {
     handleSubmit,
     formState: { errors },
   } = useForm<IssueFormData>({
-    resolver: zodResolver(createIssueScheama),
+    resolver: zodResolver(IssueScheama),
   });
 
   // displaying dynamically errors to clients
