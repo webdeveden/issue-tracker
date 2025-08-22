@@ -70,3 +70,13 @@ ADDING A MARKDOWN preview
 - use the ReactMarkdown element where your description will be
 
 commit: Add markdown preview
+
+Building skeleton for detailpage:
+
+=> grab the code snipest from the page in app/issues/page
+=> npm i react-loading-skeleton@3.3.1
+=> import skeleton 
+=> import react-loading-skeleton/description
+(= google search:react loading skeleton )
+
+in the new page loading use 2 skeletons
