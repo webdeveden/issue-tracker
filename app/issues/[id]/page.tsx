@@ -22,12 +22,7 @@ const IssueDetailPage = async ({ params }: Props) => {
     //column size based on devices
     <Grid columns={{ initial: "1", md: "2" }} gap="5">
       <Box>
-        <IssueDetails
-          issueTitle={issue.title}
-          issueDescription={issue.description}
-          issueStatus={issue.status}
-          issueCreatedAt={issue.createdAt}
-        />
+        <IssueDetails issue={issue} />
       </Box>
       <Box>
         <EditIssueButton issueId={issue.id} />

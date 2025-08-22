@@ -98,3 +98,11 @@ APPLYING THE SINGLE RESPONSABILITY PRINCIPLE
 
 - create a component in id folder " EditIssueButton" to move our edit button over there
 - create another component "IssueDetails" and move our detail element in there
+
+BUILDING THE EDIT page
+
+= Create edit folder inside id folder "editissuepage"
+= since our edit page will be the samee as page in new folder, create a reusable component insite the issue folder 
+under _component "IssueForm"
+- so we can initialize the  info of our issue will have to 
+pass the issue props of our database from prisma
