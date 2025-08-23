@@ -115,3 +115,11 @@ UNDERSTANDING CACHING
 
 => disbaling cacshing 
 - (google search: nextjs route segment config )
+
+Improving page loading:
+
+- create a reusable issueformloading component inside issues /_component
+- loading the entire form dynamic using lazy loading
+- do the same on the edit page, make sure the form in there is also loaded dynamically
+
+commit: Improve the loading experience
