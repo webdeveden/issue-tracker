@@ -110,3 +110,8 @@ pass the issue props of our database from prisma
 create an API endpoint for editing
 
 - create [id] folder inside your API folder and add a route file
+
+UNDERSTANDING CACHING
+
+=> disbaling cacshing 
+- (google search: nextjs route segment config )
