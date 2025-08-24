@@ -123,3 +123,15 @@ Improving page loading:
 - do the same on the edit page, make sure the form in there is also loaded dynamically
 
 commit: Improve the loading experience
+
+DELETING ISSUES
+
+= add a delete button by creating a separate component in the id folder "deleteissueButton"
+= pass the issueId prop
+= color to red
+= lay them vertically using with direction column
+= gap of 4
+= allocate 80% of width to details and 20% for the button use tailwind col-span-4 class
+= use the container element of radiusui to set up the max width and content alignement centered
+
+commit: Add a delete button
