@@ -148,3 +148,18 @@ commit: set up next auth
 - configuring google provider:(console.cloud.google.com)
 
 commit: Configure google provider
+
+configuring the prisma adapter , so when someone signup or sign in we store their credentials in the database
+(see nextauth.js doc about adapters)
+- npm i @next-auth/prisma-adapter@1.0.7
+- npm i prisma --save-dev
+
+in your /api/auth[...nextauth]/route.ts, import:
+- import {PrismaAdapter} from "@next-auth/prisma/adapter"
+- import prisma from "@/prisma/client"
+`
+set session: {strategy:'jwt'}
+
+sync our change on database: npx prisma migrate dev -name "add user model"
+
+commit: Add the prisma adapter
