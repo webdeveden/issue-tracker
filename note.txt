@@ -135,3 +135,13 @@ DELETING ISSUES
 = use the container element of radiusui to set up the max width and content alignement centered
 
 commit: Add a delete button
+
+AUTHENTICATION WITH NEXTAUTH
+
+- npm i next-auth(4.23.1)
+- in the api folder create an /auth/[...nextauth]/route.ts 
+- go to the env file and add 2 environement variable:
+-- NEXTAUTH_URL="address fo our website"
+-- NEXTAUTH_SECRET="random string used to encrypt json web  tokens"(generete using : openssl rand -base64 32)
+
+commit: set up next auth
