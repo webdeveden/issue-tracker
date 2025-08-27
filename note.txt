@@ -145,3 +145,6 @@ AUTHENTICATION WITH NEXTAUTH
 -- NEXTAUTH_SECRET="random string used to encrypt json web  tokens"(generete using : openssl rand -base64 32)
 
 commit: set up next auth
+- configuring google provider:(console.cloud.google.com)
+
+commit: Configure google provider
