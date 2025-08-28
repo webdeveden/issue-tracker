@@ -187,3 +187,11 @@ POPULATING THE ASSIGNEE SELECT COMPONENT
 => we want our select element to populate users from our database
 => to do so , we need to build an api client to our server and have the assigneeselect component fetch the user from our server
 - in api add a folder called /users/route.ts
+
+Fetching data using react query:
+
+- npm i @tanstack/react-query@4.35.3
+- in the app/ QueryclientProvider.tsx
+- import QueryClient.
+
+commit: set up react Query
