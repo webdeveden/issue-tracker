@@ -2,7 +2,7 @@ import { NextRequest, NextResponse } from "next/server";
 import prisma from "@/prisma/client";
 import { IssueScheama } from "../../validationSchemas";
 import { getServerSession } from "next-auth";
-import authOptions from "@/app/auth/AuthOptions";
+import authOptions from "@/app/auth/authOptions";
 
 export async function POST(request: NextRequest) {
   // protecting our api routes

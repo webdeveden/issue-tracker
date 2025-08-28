@@ -1,7 +1,7 @@
 import { NextRequest, NextResponse } from "next/server";
 import prisma from "@/prisma/client";
 import { IssueScheama } from "@/app/validationSchemas";
-import authOptions from "@/app/auth/AuthOptions";
+import authOptions from "@/app/auth/authOptions";
 import { getServerSession } from "next-auth";
 
 interface Prop {

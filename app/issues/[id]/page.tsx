@@ -5,7 +5,8 @@ import EditIssueButton from "./EditIssueButton";
 import IssueDetails from "./IssueDetails";
 import DeleteIssueButton from "./DeleteIssueButton";
 import { getServerSession } from "next-auth";
-import authOptions from "@/app/auth/AuthOptions";
+import authOptions from "@/app/auth/authOptions";
+import AssigneeSelect from "./AssigneeSelect";
 // import delay from "delay";
 
 interface Props {
@@ -32,6 +33,7 @@ const IssueDetailPage = async ({ params }: Props) => {
         {/* displaying edit and delete button only to authenticated users */}
         {session && (
           <Flex direction="column" gap="4">
+            <AssigneeSelect />
             <EditIssueButton issueId={issue.id} />
             <DeleteIssueButton issueId={issue.id} />
           </Flex>

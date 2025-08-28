@@ -174,3 +174,10 @@ ADDING A LOGIN AND LOGOUT LINKS:
 Securing our app using a middleware:
 
 => in the route of the project add "middleware.ts"
+
+ASSIGNING ISSUES TO USERS
+
+=> Using the select element in radius ui
+- create an assigneeSelect in /issues/[id]
+
+commit: Build the assignee select component.
