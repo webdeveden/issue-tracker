@@ -2,6 +2,8 @@
 
 import Link from "next/link";
 import React from "react";
+// Update the import path to the correct location of Skeleton, for example:
+import Skeleton from "@/app/components/Skeleton";
 import { AiFillBug } from "react-icons/ai";
 import classnames from "classnames";
 import { usePathname } from "next/navigation";
@@ -68,6 +70,8 @@ const NavLinks = () => {
 
 const AuthStatus = () => {
   const { status, data: session } = useSession();
+
+  if (status === "loading") return <Skeleton width="3rem" />;
   return (
     <Box>
       {status === "authenticated" && (
@@ -79,6 +83,7 @@ const AuthStatus = () => {
               className="cursor-pointer"
               radius="full"
               size="2"
+              referrerPolicy="no-referrer"
             />
           </DropdownMenu.Trigger>
           <DropdownMenu.Content>
