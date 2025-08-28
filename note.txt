@@ -169,3 +169,8 @@ ADDING A LOGIN AND LOGOUT LINKS:
 - const {status,data:session} =useSession 
 - create a folder in the app folder (app/auth/Provider.tsx), make it a client element
 -then wrap the element of your body in the layout with the authprovider you defined
+
+
+Securing our app using a middleware:
+
+=> in the route of the project add "middleware.ts"
