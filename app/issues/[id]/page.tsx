@@ -33,7 +33,7 @@ const IssueDetailPage = async ({ params }: Props) => {
         {/* displaying edit and delete button only to authenticated users */}
         {session && (
           <Flex direction="column" gap="4">
-            <AssigneeSelect />
+            <AssigneeSelect issue={issue} />
             <EditIssueButton issueId={issue.id} />
             <DeleteIssueButton issueId={issue.id} />
           </Flex>
