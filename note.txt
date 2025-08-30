@@ -195,3 +195,13 @@ Fetching data using react query:
 - import QueryClient.
 
 commit: set up react Query
+`
+USING TOAST NOTIFICATION:
+
+-npm i react-hot-toast@2.4.1
+- to our assignee component :
+    - import toast, {Toaster} from 'react-hot-toast,
+- add the try catch block and await the axios patch request
+- if error displays the message "Changes could not be saved"
+
+commit: show toast notification
