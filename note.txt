@@ -204,4 +204,12 @@ USING TOAST NOTIFICATION:
 - add the try catch block and await the axios patch request
 - if error displays the message "Changes could not be saved"
 
-commit: show toast notification
+commit: show toast NOTIFICATION
+
+
+Filtering issue by their status
+
+- create a component in /issues/list/ "IssueStatusFilter"
+- use the select element from radix ui
+
+commit: Build the filter component
