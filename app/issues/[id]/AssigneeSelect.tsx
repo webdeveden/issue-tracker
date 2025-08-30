@@ -9,7 +9,7 @@ import toast, { Toaster } from "react-hot-toast";
 
 interface Props {
   issue: Issue;
-  users: User[];
+  users?: User[];
 }
 
 const AssigneeSelect = ({ issue }: Props) => {
