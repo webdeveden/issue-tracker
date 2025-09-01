@@ -43,7 +43,7 @@ const NavLinks = () => {
       label: "Dashboard",
     },
     {
-      href: "/issues",
+      href: "/issues/list",
       label: "Issues",
     },
   ];

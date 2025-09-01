@@ -213,3 +213,9 @@ Filtering issue by their status
 - use the select element from radix ui
 
 commit: Build the filter component
+
+filtering issues:
+
+- in our IssueStatusFilter, onvalue change in select.root
+- when the issue is click use userouter to navigate the use to a query string:
+(= ?status=value)
