@@ -227,4 +227,16 @@ SORTING TABLE.
 -
 
 => Sorting data
-- 
+- use useSearchparams hook and new URLsearchParams
+
+- generating dummy data for pagination using ChatGPT:
+
+' Given the following prisma model ,generate SQL statement to insert 20 records in the issue table. use real-world titles and description for issues. status can be OPEN, IN-PROGRESS or CLOSED. Description should be a paragraph
+long. Provide different values for createdAt and updatedAt columns '.
+
+=> Pagination :
+
+- create a resusable component called pagination
+- with few props : itemCount of number type, pagesize (number), curenPage(number)
+- use the flex element from radixui
+- add text and 2 buttons
