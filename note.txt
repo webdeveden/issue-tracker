@@ -219,3 +219,9 @@ filtering issues:
 - in our IssueStatusFilter, onvalue change in select.root
 - when the issue is click use userouter to navigate the use to a query string:
 (= ?status=value)
+
+SORTING TABLE.
+- in issuepage.tsx:
+=> making the column clickable and the send them as query params
+- store our column in. array and then map them (column)
+-
