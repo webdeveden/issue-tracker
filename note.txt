@@ -240,3 +240,8 @@ long. Provide different values for createdAt and updatedAt columns '.
 - with few props : itemCount of number type, pagesize (number), curenPage(number)
 - use the flex element from radixui
 - add text and 2 buttons
+
+=> implementing pagination
+
+- use 2 hooks: useRouter and useSearchParams
+- use new URLsearchParam 
