@@ -6,7 +6,7 @@ import NextLink from "next/link";
 // import delay from "delay";
 import IssueActions from "./IssueActions";
 import { Issue, Status } from "@prisma/client";
-import { orderBy } from "lodash";
+
 import { ArrowUpIcon } from "@radix-ui/react-icons";
 
 interface Props {
