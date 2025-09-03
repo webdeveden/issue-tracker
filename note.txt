@@ -225,3 +225,6 @@ SORTING TABLE.
 => making the column clickable and the send them as query params
 - store our column in. array and then map them (column)
 -
+
+=> Sorting data
+- 

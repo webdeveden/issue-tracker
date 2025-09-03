@@ -24,8 +24,17 @@ const issuesPage = async ({ searchParams }: Props) => {
   const status = statuses.includes(searchParams.status)
     ? searchParams.status
     : undefined;
+  // THESE logic makes sure even if it's a wrong property name
+  // the app won't crush.
+  const orderBy = columns
+    .map((column) => column.value) // return a string array
+    .includes(searchParams.orderBy)
+    ? { [searchParams.orderBy]: "asc" } // [property name] dynamically compute the name of the property
+    : undefined;
+
   const issues = await prisma.issue.findMany({
     where: { status: status },
+    orderBy: orderBy,
   });
   // await delay(2000);
   return (
