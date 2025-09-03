@@ -8,6 +8,7 @@ import IssueActions from "./IssueActions";
 import { Issue, Status } from "@prisma/client";
 
 import { ArrowUpIcon } from "@radix-ui/react-icons";
+import classNames from "classnames";
 
 interface Props {
   searchParams: { status: Status; orderBy: keyof Issue };
@@ -44,7 +45,10 @@ const issuesPage = async ({ searchParams }: Props) => {
         <Table.Header>
           <Table.Row>
             {columns.map((column) => (
-              <Table.ColumnHeaderCell key={column.value}>
+              <Table.ColumnHeaderCell
+                key={column.value}
+                className={column.className}
+              >
                 <NextLink
                   href={{
                     query: { ...searchParams, orderBy: column.value },
