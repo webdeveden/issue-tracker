@@ -245,3 +245,12 @@ long. Provide different values for createdAt and updatedAt columns '.
 
 - use 2 hooks: useRouter and useSearchParams
 - use new URLsearchParam 
+
+-paginating issues
+
+=> issuepage , add page parameter to our props
+= fetch the issue for a given page , 
+= add 2 property on your issues fetcher, skip(number of record to skip ) 
+and take(number of record we wanna fetch per page)
+
+= get the total number of issues(=using prisma.issue.count)
