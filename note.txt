@@ -254,3 +254,14 @@ long. Provide different values for createdAt and updatedAt columns '.
 and take(number of record we wanna fetch per page)
 
 = get the total number of issues(=using prisma.issue.count)
+
+REFACTORING component:
+
+- in list folder create a file IssueTable and move all the element in there
+- move the column const in the new component 
+-define a prop that includes searchParams and issues array.
+- export the column value Only.
+- since we wanna avoid reusing the searchParams interface 
+
+
+commit: Refactor, Extract issueTable
