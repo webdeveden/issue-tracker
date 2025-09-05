@@ -265,3 +265,11 @@ REFACTORING component:
 
 
 commit: Refactor, Extract issueTable
+
+
+Building the LatestIssue component :
+
+-in the app folder, create a file "LatestIssue"
+- create the component using prisma and get the top 5 issue based in descending order.
+- create a table and put it in a card.
+- add a heading "Latest Issues" in the card size to 4 and mb to 5
