@@ -273,3 +273,8 @@ Building the LatestIssue component :
 - create the component using prisma and get the top 5 issue based in descending order.
 - create a table and put it in a card.
 - add a heading "Latest Issues" in the card size to 4 and mb to 5
+
+
+Building the barchart using Recharts library (= recharts.org):
+- npm i recharts@2.8.0
+- create a component called  'issueChart'
