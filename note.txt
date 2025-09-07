@@ -278,3 +278,11 @@ Building the LatestIssue component :
 Building the barchart using Recharts library (= recharts.org):
 - npm i recharts@2.8.0
 - create a component called  'issueChart'
+
+
+Optimization using react cache:
+
+-inside the cache funstion use prisma to  fecth the issueId
+- first time react cache will fecth the use and store it it's caches
+- when we call the fetchuser for the second time it rapidly find it in it's caches.
+
