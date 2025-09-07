@@ -286,3 +286,10 @@ Optimization using react cache:
 - first time react cache will fecth the use and store it it's caches
 - when we call the fetchuser for the second time it rapidly find it in it's caches.
 
+ERROR TRACKING TOOLS
+
+- used fo track errors that user encounter when using our app:
+
+. sentry, bugsnag, lockrocket
+
+- create an account by going to sentry.io
