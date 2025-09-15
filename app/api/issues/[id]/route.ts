@@ -40,7 +40,9 @@ export async function PATCH(request: NextRequest, { params }: Prop) {
     data: {
       title: body.title,
       description: body.description,
+      comment: body.comment ?? null,
       assignedToUserId: body.assignedToUserId,
+      status: body.status,
     },
   });
 

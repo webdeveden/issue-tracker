@@ -3,13 +3,22 @@ import ErrorMessage from "@/app/components/ErrorMessage";
 import Spinner from "@/app/components/Spinner";
 import { IssueScheama } from "@/app/validationSchemas";
 import { zodResolver } from "@hookform/resolvers/zod";
-import { Issue } from "@prisma/client";
-import { Button, Callout, TextField } from "@radix-ui/themes";
+import { Issue, Status } from "@prisma/client";
+import {
+  Box,
+  Button,
+  Callout,
+  Flex,
+  Select,
+  TextArea,
+  TextField,
+} from "@radix-ui/themes";
 import axios from "axios";
 import "easymde/dist/easymde.min.css";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
 import { Controller, useForm } from "react-hook-form";
+import toast from "react-hot-toast";
 import SimpleMDE from "react-simplemde-editor";
 import { z } from "zod";
 
@@ -22,6 +31,13 @@ interface Props {
 type IssueFormData = z.infer<typeof IssueScheama>;
 
 // lazy loading to disable server side rendering
+
+const statuses: { label: string; value?: Status }[] = [
+  { label: "Open", value: "OPEN" },
+  { label: "In Progress", value: "IN_PROGRESS" },
+  { label: "closed", value: "CLOSED" },
+];
+// const queryClient = useQueryClient();
 
 const IssueForm = ({ issue }: Props) => {
   // navigating user back to the creating new issue after submit
@@ -78,13 +94,57 @@ const IssueForm = ({ issue }: Props) => {
             <SimpleMDE placeholder="Description" {...field} />
           )}
         />
+        <Box>
+          {issue && (
+            <TextArea
+              size="3"
+              placeholder="Comment(Optional)"
+              {...register("comment")}
+              defaultValue={issue?.comment ?? ""}
+            />
+          )}
+        </Box>
+        <Box>
+          {issue && (
+            <Select.Root
+              onValueChange={async (newStatus) => {
+                try {
+                  await axios.patch(`/api/issues/${issue.id}`, {
+                    status: newStatus,
+                  });
+
+                  toast.success(`Status updated to ${newStatus}`);
+                } catch (error) {
+                  toast.error("Failed to update status");
+                }
+              }}
+            >
+              <Select.Trigger placeholder="Change issue status">
+                {issue.status}
+              </Select.Trigger>
+              <Select.Content>
+                {statuses.map((status) => (
+                  <Select.Item
+                    key={status.value}
+                    value={status.value || ""}
+                    disabled={status.value === issue.status}
+                  >
+                    {status.label}
+                  </Select.Item>
+                ))}
+              </Select.Content>
+            </Select.Root>
+          )}
+        </Box>
 
         <ErrorMessage>{errors.description?.message}</ErrorMessage>
-
-        <Button disabled={isSubmitting}>
-          {issue ? "Update Issue" : "Submit New Issue "}{" "}
-          {isSubmitting && <Spinner />}
-        </Button>
+        <Flex justify="between">
+          <Button onClick={() => router.push("/issues/list")}>Cancel</Button>
+          <Button disabled={isSubmitting}>
+            {issue ? "Update Issue" : "Submit New Issue "}{" "}
+            {isSubmitting && <Spinner />}
+          </Button>
+        </Flex>
       </form>
     </div>
   );

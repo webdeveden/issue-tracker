@@ -1,10 +1,11 @@
 "use client";
 
-import { Issue, User } from "@prisma/client";
 import Skeleton from "@/app/components/Skeleton";
+import { Issue, User } from "@prisma/client";
 import { Select } from "@radix-ui/themes";
 import { useQuery } from "@tanstack/react-query";
 import axios from "axios";
+import { useRouter } from "next/navigation";
 import toast, { Toaster } from "react-hot-toast";
 
 interface Props {
@@ -13,6 +14,7 @@ interface Props {
 }
 
 const AssigneeSelect = ({ issue }: Props) => {
+  const router = useRouter();
   const {
     data: users,
     error,
@@ -45,6 +47,7 @@ const AssigneeSelect = ({ issue }: Props) => {
           try {
             await axios.patch(`/api/issues/${issue.id}`, {
               assignedToUserId: userId || null,
+              status: userId ? "IN_PROGRESS" : "OPEN",
             });
 
             const selectedUser = users?.find((user) => user.id === userId);
@@ -54,6 +57,7 @@ const AssigneeSelect = ({ issue }: Props) => {
                 `Assignee updated successfully to ${selectedUser.name}`
               );
             }
+            router.refresh();
           } catch (error) {
             toast.error("Failed to update assignee");
           }

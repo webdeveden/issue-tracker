@@ -293,3 +293,15 @@ ERROR TRACKING TOOLS
 . sentry, bugsnag, lockrocket
 
 - create an account by going to sentry.io
+
+DEPLOY OUR APP TO PRODUCTION
+
+=> before we can deploy our app to production we have to set up our production database (e.g: planetscale)
+
+
+db:
+
+username:if0_39887919
+password:CLyqxZsDN4EPe
+
+url: /home/vol1_7/infinityfree.com/if0_39887919
