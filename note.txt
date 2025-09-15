@@ -305,3 +305,20 @@ username:if0_39887919
 password:CLyqxZsDN4EPe
 
 url: /home/vol1_7/infinityfree.com/if0_39887919
+
+
+.env 
+
+# Environment variables declared in this file are automatically made available to Prisma.
+# See the documentation for more detail: https://pris.ly/d/prisma-schema#accessing-environment-variables-from-the-schema
+# "mysql://root:NextJs@2025@localhost:3306/nextapp"
+# Prisma supports the native connection string format for PostgreSQL, MySQL, SQLite, SQL Server, MongoDB and CockroachDB.
+# See the documentation for all the connection string options: https://pris.ly/d/connection-strings
+
+# DATABASE_URL="mysql://root:NextJs@2025@localhost:3306/issue-tracker"
+NEXTAUTH_URL="http://localhost:3000"
+NEXTAUTH_SECRET="xoIvgHJwJGq/XzMOi/8Y2gkIZNPK3KtzL+OPENjJ8iU="
+GOOGLE_CLIENT_ID="40102160553-kjuclj7kpj8r1rqrjeejtn4ffucqr3om.apps.googleusercontent.com"
+GOOGLE_CLIENT_SECRET="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"
+DATABASE_URL="mysql://06f176efc7e7b87d:95a9c376bf1082840730aca5198c31@primary.issue-tracker--m4xzrbgzjgrl.addon.code.run:3306/3dd0763c951d?sslaccept=strict"
+
